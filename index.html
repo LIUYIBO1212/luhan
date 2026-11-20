@@ -1,0 +1,636 @@
+hello test<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>유일박의 최애 소개 · 刘一博的最爱：鹿晗</title>
+  <meta name="description" content="유일박(刘一博)이 가장 좋아하는 아티스트 루한(鹿晗)을 소개하는 한중 이중언어 페이지입니다. 经营信息论实践课作业。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFF7DA;
+      --bg-2: #FFEFB8;
+      --paper: #FFFCF1;
+      --ink: #3A2E12;
+      --ink-2: #5A4A26;
+      --muted: #7A6A45;
+      --sun: #F5B700;
+      --sun-soft: #FFE27A;
+      --honey: #E39A1E;
+      --fawn: #C98B4E;
+      --line: #EBD9A3;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(120, 90, 20, .10);
+      --font: "Noto Sans KR", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --font-zh: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Noto Sans KR", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: var(--font); font-size: 16px; line-height: 1.7;
+      overflow-x: hidden; word-break: keep-all; overflow-wrap: break-word;
+    }
+    :lang(zh-CN) { font-family: var(--font-zh); word-break: normal; }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; }
+    button { font: inherit; color: inherit; }
+    :focus-visible { outline: 3px solid var(--honey); outline-offset: 3px; border-radius: 6px; }
+
+    .skip-link { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px; text-decoration: none; }
+    .skip-link:focus { top: 12px; }
+    .container { width: min(1120px, 100% - 40px); margin-inline: auto; }
+
+    /* 중국어 보조 문장 · 中文辅助文字 */
+    .zh { display: block; font-size: .55em; font-weight: 500; color: var(--muted); margin-top: 6px; letter-spacing: 0; }
+    .zh-p { color: var(--muted); font-size: .92em; }
+
+    .demo-bar { background: var(--ink); color: var(--sun-soft); font-size: 12px; text-align: center; padding: 7px 16px; }
+
+    /* ---------- 헤더 ---------- */
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255, 247, 218, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; min-width: 0; }
+    .brand-dot { width: 28px; height: 28px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #FFE27A, var(--sun)); box-shadow: 0 0 0 4px rgba(245, 183, 0, .2); flex: none; }
+    .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .brand-text strong { font-size: 15px; }
+    .brand-text small { font-size: 9px; letter-spacing: .14em; color: var(--muted); }
+    .nav-toggle { display: none; border: 1px solid var(--line); background: var(--paper); border-radius: 12px; padding: 8px 14px; cursor: pointer; font-size: 14px; font-weight: 500; }
+    .site-nav ul { list-style: none; display: flex; gap: 4px; margin: 0; padding: 0; }
+    .site-nav a { display: block; text-decoration: none; font-size: 14px; font-weight: 700; padding: 8px 12px; border-radius: 10px; }
+    .site-nav a small { font-weight: 400; color: var(--muted); margin-left: 4px; }
+    .site-nav a:hover { background: var(--paper); }
+    @media (max-width: 760px) {
+      .nav-toggle { display: inline-flex; align-items: center; gap: 6px; }
+      .site-nav { position: absolute; left: 0; right: 0; top: 68px; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); display: none; }
+      .site-nav.is-open { display: block; }
+      .site-nav ul { flex-direction: column; padding: 10px 20px 16px; gap: 2px; }
+      .site-nav a { padding: 12px; font-size: 16px; }
+    }
+
+    /* ---------- 공통 ---------- */
+    section { padding: 88px 0; }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; color: var(--honey); text-transform: uppercase; margin: 0 0 10px; }
+    .section-title { font-size: clamp(28px, 4vw, 40px); line-height: 1.25; margin: 0; font-weight: 900; color: var(--ink); }
+    .section-head { display: grid; grid-template-columns: 1fr minmax(0, 380px); gap: 24px; align-items: end; margin-bottom: 40px; }
+    .section-head p { margin: 0; color: var(--ink-2); font-size: 14px; }
+    @media (max-width: 760px) { .section-head { grid-template-columns: 1fr; } section { padding: 64px 0; } }
+
+    .chip { display: inline-block; font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 999px; background: var(--sun-soft); color: var(--ink); }
+    .chip--outline { background: transparent; border: 1px solid var(--line); color: var(--ink-2); }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: transform .15s ease, background-color .15s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn small { font-weight: 500; opacity: .85; }
+    .btn--primary { background: var(--ink); color: var(--sun-soft); }
+    .btn--primary:hover { background: #4E3E18; }
+    .btn--ghost { background: var(--paper); border-color: var(--line); color: var(--ink); }
+
+    /* ---------- 소개 ---------- */
+    .hero { padding: 56px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 40px; align-items: center; }
+    .hero-tagline { color: var(--ink-2); margin: 18px 0 6px; font-size: 15px; font-weight: 500; }
+    .hero-tagline span { display: block; color: var(--muted); font-size: 14px; font-weight: 400; }
+    .hero-name { font-size: clamp(64px, 10vw, 108px); line-height: 1; margin: 0; font-weight: 900; color: var(--ink); letter-spacing: -.03em; display: flex; align-items: center; gap: 12px; }
+    .hero-name .spark { color: var(--sun); font-size: .55em; }
+    .hero-sub { font-weight: 700; margin: 10px 0 18px; font-size: 18px; }
+    .hero-sub span { color: var(--honey); }
+    .hero-desc { max-width: 480px; margin: 0 0 4px; }
+    .hero-desc + .zh-p { max-width: 480px; margin: 0 0 18px; }
+    .hero-meta { list-style: none; padding: 16px 18px; margin: 0 0 20px; display: grid; gap: 6px; font-size: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; max-width: 480px; }
+    .hero-meta li { display: grid; grid-template-columns: 96px 1fr; gap: 8px; }
+    .hero-meta b { color: var(--ink); }
+    .hero-meta b small { display: block; font-weight: 400; color: var(--muted); font-size: 11px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* ---------- 그림 ---------- */
+    .scene-wrap { position: relative; margin: 0; background: radial-gradient(ellipse at 50% 55%, #FFF3C4 0%, #FFE8A0 75%); border-radius: 28px; padding: 20px 20px 16px; overflow: hidden; }
+    .scene-motion { transform-origin: 50% 70%; will-change: transform; }
+    .scene-motion svg { width: 100%; height: auto; }
+    .scene-tools { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
+    .scene-hint { font-size: 12px; color: var(--ink-2); margin: 0; }
+    .motion-toggle { border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 7px 14px; font-size: 13px; font-weight: 500; cursor: pointer; }
+    .motion-toggle[aria-pressed="true"] { background: var(--ink); color: var(--sun-soft); border-color: var(--ink); }
+    .scene-story { margin-top: 14px; padding: 14px 16px; background: var(--paper); border-radius: 14px; font-size: 13px; color: var(--ink-2); border: 1px solid var(--line); }
+    .scene-story p { margin: 0; }
+    .scene-story p + p { margin-top: 4px; }
+    .scene-story strong { color: var(--ink); }
+    @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
+
+    /* ---------- 이유 카드 ---------- */
+    .reasons { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    @media (max-width: 900px) { .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow); }
+    .card-thumb { aspect-ratio: 16 / 9; display: grid; place-items: center; }
+    .card-thumb svg { width: 44%; }
+    .thumb-a { background: #FFE27A; }
+    .thumb-b { background: #FFD3A1; }
+    .thumb-c { background: #E3EFC4; }
+    .card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .card-label { font-size: 11px; letter-spacing: .1em; color: var(--muted); font-weight: 700; margin: 0; }
+    .card-body h3 { margin: 0; font-size: 20px; line-height: 1.35; }
+    .card-body h3 .zh { font-size: 14px; }
+    .card-body p { margin: 0; font-size: 14px; color: var(--ink-2); }
+    .card-body .zh-p { font-size: 13px; }
+    .card-body .btn { align-self: flex-start; margin-top: auto; padding: 9px 16px; }
+
+    /* ---------- 상세 보기 ---------- */
+    dialog.detail { width: min(640px, 100% - 32px); max-height: calc(100% - 48px); border: 0; border-radius: 22px; padding: 0; background: var(--paper); color: var(--ink); box-shadow: 0 30px 80px rgba(60, 40, 0, .35); }
+    dialog.detail::backdrop { background: rgba(58, 46, 18, .45); }
+    .dialog-inner { padding: 28px 28px 30px; }
+    .dialog-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .dialog-top h2 { margin: 4px 0 0; font-size: 24px; line-height: 1.35; }
+    .dialog-close { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); background: #fff; cursor: pointer; font-size: 20px; line-height: 1; }
+    .dialog-inner dl { margin: 20px 0 0; display: grid; gap: 14px; }
+    .dialog-inner dt { font-size: 13px; font-weight: 700; color: var(--honey); }
+    .dialog-inner dd { margin: 2px 0 0; font-size: 14px; color: var(--ink-2); }
+    .dialog-inner dd .zh-p { display: block; margin-top: 2px; font-size: 13px; }
+    .mine { background: var(--bg-2); border-radius: 12px; padding: 12px 14px; }
+
+    /* ---------- 발자취 ---------- */
+    .timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+    .timeline::before { content: ""; position: absolute; left: 150px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+    .timeline li { display: grid; grid-template-columns: 150px 1fr; gap: 28px; padding: 12px 0; position: relative; }
+    .timeline li::before { content: ""; position: absolute; left: 144px; top: 22px; width: 14px; height: 14px; border-radius: 50%; background: var(--paper); border: 3px solid var(--sun); }
+    .t-date { font-size: 14px; font-weight: 700; color: var(--ink-2); padding-top: 6px; }
+    .t-card { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 14px 18px; margin-left: 10px; }
+    .t-card h3 { margin: 0 0 2px; font-size: 16px; }
+    .t-card p { margin: 0; font-size: 14px; color: var(--ink-2); }
+    .t-card .zh-p { font-size: 13px; }
+    @media (max-width: 600px) {
+      .timeline::before { left: 7px; }
+      .timeline li { grid-template-columns: 1fr; gap: 6px; padding-left: 28px; }
+      .timeline li::before { left: 1px; top: 18px; }
+      .t-date { padding-top: 0; }
+      .t-card { margin-left: 0; }
+    }
+
+    /* ---------- 마무리 ---------- */
+    .closing-box { background: var(--ink); color: #FFF3C4; border-radius: 28px; padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; align-items: center; }
+    .closing-box .eyebrow { color: var(--sun); }
+    .closing-box .section-title { color: #fff; }
+    .closing-box .section-title .zh { color: var(--sun-soft); }
+    .closing-box p { margin: 12px 0 0; color: #E9DDB4; font-size: 14px; }
+    .note-card { background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 226, 122, .3); border-radius: 18px; padding: 22px; font-size: 13px; color: #E9DDB4; }
+    .note-card strong { color: var(--sun-soft); display: block; margin-bottom: 6px; font-size: 14px; }
+    .note-card p { margin: 0; }
+    .note-card p + p { margin-top: 6px; }
+    @media (max-width: 760px) { .closing-box { grid-template-columns: 1fr; } }
+
+    .site-footer { padding: 32px 0 48px; font-size: 13px; color: var(--muted); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 20px; }
+    .footer-inner a { color: var(--ink); font-weight: 700; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기 · 跳到正文</a>
+
+  <div class="demo-bar">경영정보론 실습 과제 · 비공식 팬 소개 페이지 <span lang="zh-CN">｜经营信息论实践作业 · 非官方粉丝介绍页</span></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#about" aria-label="처음으로 · 回到顶部">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span class="brand-text"><strong>유일박 · <span lang="zh-CN">刘一博</span></strong><small>MY FAVORITE ARTIST</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span> 메뉴 <span lang="zh-CN">菜单</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="주 메뉴 · 主菜单">
+        <ul>
+          <li><a href="#about">소개<small lang="zh-CN">关于</small></a></li>
+          <li><a href="#reasons">이유<small lang="zh-CN">理由</small></a></li>
+          <li><a href="#journey">발자취<small lang="zh-CN">足迹</small></a></li>
+          <li><a href="#closing">한마디<small lang="zh-CN">结语</small></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ 01 소개 · 关于 ============ -->
+    <section class="hero" id="about" aria-labelledby="about-title">
+      <div class="container hero-grid">
+        <div>
+          <ul class="chip-row" aria-label="키워드 · 关键词">
+            <li class="chip">MUSIC</li>
+            <li class="chip">ACTING</li>
+            <li class="chip chip--outline">FOOTBALL ⚽</li>
+          </ul>
+          <p class="hero-tagline">제가 가장 좋아하는 아티스트를 소개합니다.<span lang="zh-CN">介绍我最喜欢的艺人。</span></p>
+          <h1 class="hero-name" id="about-title">LU HAN <span class="spark" aria-hidden="true">✦</span></h1>
+          <p class="hero-sub">루한 · <span lang="zh-CN">鹿晗</span></p>
+          <p class="hero-desc">안녕하세요, 유일박입니다. 이 페이지에서는 노래하고, 연기하고, 축구를 사랑하는 저의 최애 루한을 세 가지 이유로 소개합니다.</p>
+          <p class="zh-p" lang="zh-CN">大家好，我是刘一博。这个页面用三个理由，介绍我最喜欢的艺人——会唱歌、会演戏、又热爱足球的鹿晗。</p>
+          <ul class="hero-meta">
+            <li><b>만든 사람<small lang="zh-CN">作者</small></b><span>유일박 · <span lang="zh-CN">刘一博</span></span></li>
+            <li><b>지금<small lang="zh-CN">现在</small></b><span>가톨릭대학교에서 경영학 공부 중 · <span lang="zh-CN">在韩国加图立大学学习经营学</span></span></li>
+            <li><b>최애<small lang="zh-CN">最爱</small></b><span>가수 겸 배우 루한 · <span lang="zh-CN">歌手兼演员鹿晗</span></span></li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="#reasons">좋아하는 이유 보기 <small lang="zh-CN">看三个理由</small> <span aria-hidden="true">↓</span></a>
+            <a class="btn btn--ghost" href="#journey">발자취 보기 <small lang="zh-CN">看他的足迹</small></a>
+          </div>
+        </div>
+
+        <!-- 작은 무대 그림 · 小舞台插画 -->
+        <figure class="scene-wrap">
+          <div class="scene-motion" id="scene">
+            <svg viewBox="0 0 440 400" role="img" aria-labelledby="scene-title scene-desc">
+              <title id="scene-title">작은 노란 무대 · 黄色小舞台</title>
+              <desc id="scene-desc">마이크를 든 아기 사슴이 노란 조명 아래 작은 무대에 서 있고, 옆에는 축구공과 영화 슬레이트가 있다. 戴着小鹿角的小鹿拿着麦克风站在黄色灯光下的小舞台上，旁边有足球和电影场记板。</desc>
+              <defs>
+                <radialGradient id="spot" cx="50%" cy="40%" r="60%">
+                  <stop offset="0" stop-color="#FFF6CC"/><stop offset="1" stop-color="#FFE27A" stop-opacity="0"/>
+                </radialGradient>
+                <linearGradient id="stage" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#F3B23A"/><stop offset="1" stop-color="#D98A1C"/>
+                </linearGradient>
+                <linearGradient id="fur" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#D99A5B"/><stop offset="1" stop-color="#B97C40"/>
+                </linearGradient>
+                <filter id="soft" x="-20%" y="-20%" width="140%" height="160%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#8A6410" flood-opacity=".2"/>
+                </filter>
+              </defs>
+
+              <!-- 뒤쪽 · 后层 -->
+              <g data-depth="0.4">
+                <path d="M150 0 L290 0 L360 330 L80 330 Z" fill="url(#spot)" opacity=".9"/>
+                <ellipse cx="220" cy="352" rx="180" ry="28" fill="#F2CF6A"/>
+                <circle cx="78" cy="96" r="4" fill="#FFF3C4"/>
+                <circle cx="372" cy="232" r="3" fill="#FFF3C4"/>
+                <circle cx="96" cy="230" r="2.5" fill="#FFF3C4"/>
+                <path d="M88 150 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1 z" fill="#FFF3C4"/>
+                <path d="M356 300 l2 5 5 1 -4 3 1 5 -4 -2 -4 2 1 -5 -4 -3 5 -1 z" fill="#FFF3C4"/>
+              </g>
+
+              <!-- 가운데 · 中层 -->
+              <g data-depth="1">
+                <!-- 무대 -->
+                <rect x="96" y="306" width="248" height="36" rx="14" fill="url(#stage)" filter="url(#soft)"/>
+                <ellipse cx="220" cy="308" rx="124" ry="12" fill="#F7C552"/>
+                <!-- 축구공 -->
+                <g transform="translate(132 286)">
+                  <circle r="18" fill="#FFFFFF" stroke="#3A2E12" stroke-width="2"/>
+                  <path d="M0 -6 L6 -2 L4 5 L-4 5 L-6 -2 Z" fill="#3A2E12"/>
+                  <path d="M0 -6 L0 -17 M6 -2 L16 -6 M4 5 L10 14 M-4 5 L-10 14 M-6 -2 L-16 -6" stroke="#3A2E12" stroke-width="1.6"/>
+                </g>
+                <!-- 슬레이트 -->
+                <g transform="translate(298 266) rotate(6)">
+                  <rect x="0" y="10" width="40" height="28" rx="3" fill="#3A2E12"/>
+                  <rect x="0" y="0" width="40" height="10" rx="2" fill="#FFF3C4" transform="rotate(-10 0 10)"/>
+                  <path d="M6 1 l6 8 M16 -1 l6 8 M26 -3 l6 8" stroke="#3A2E12" stroke-width="3" transform="rotate(-10 0 10)"/>
+                  <rect x="6" y="18" width="20" height="3" rx="1.5" fill="#FFE27A"/>
+                  <rect x="6" y="25" width="14" height="3" rx="1.5" fill="#FFE27A" opacity=".6"/>
+                </g>
+                <!-- 사슴 몸 -->
+                <rect x="198" y="282" width="16" height="26" rx="8" fill="#B07338"/>
+                <rect x="226" y="282" width="16" height="26" rx="8" fill="#B07338"/>
+                <ellipse cx="206" cy="308" rx="9" ry="4" fill="#4A3418"/>
+                <ellipse cx="234" cy="308" rx="9" ry="4" fill="#4A3418"/>
+                <ellipse cx="220" cy="258" rx="42" ry="38" fill="url(#fur)"/>
+                <ellipse cx="220" cy="270" rx="24" ry="22" fill="#F8E6C8"/>
+                <circle cx="190" cy="246" r="3.5" fill="#F8E6C8"/>
+                <circle cx="196" cy="262" r="3" fill="#F8E6C8"/>
+                <circle cx="248" cy="244" r="3.5" fill="#F8E6C8"/>
+                <circle cx="246" cy="262" r="3" fill="#F8E6C8"/>
+                <!-- 왼팔 -->
+                <path d="M190 246 Q182 268 198 280" fill="none" stroke="#C48644" stroke-width="13" stroke-linecap="round"/>
+                <!-- 오른팔 + 마이크 -->
+                <g transform="rotate(-22 262 228)">
+                  <rect x="257" y="214" width="10" height="34" rx="4" fill="#3A2E12"/>
+                  <circle cx="262" cy="210" r="11" fill="#A8A8A0"/>
+                  <path d="M253 206 h18 M252 211 h20 M254 216 h16" stroke="#8C8C84" stroke-width="1.4"/>
+                </g>
+                <path d="M248 252 Q262 250 266 236" fill="none" stroke="#C48644" stroke-width="13" stroke-linecap="round"/>
+                <!-- 뿔 -->
+                <path d="M204 166 Q198 146 192 132 M197 150 Q186 148 180 140" fill="none" stroke="#8A5A2B" stroke-width="5" stroke-linecap="round"/>
+                <path d="M236 166 Q242 146 248 132 M243 150 Q254 148 260 140" fill="none" stroke="#8A5A2B" stroke-width="5" stroke-linecap="round"/>
+                <!-- 귀 -->
+                <ellipse cx="178" cy="182" rx="20" ry="10" fill="url(#fur)" transform="rotate(-25 178 182)"/>
+                <ellipse cx="180" cy="182" rx="12" ry="5" fill="#F2C9A0" transform="rotate(-25 180 182)"/>
+                <ellipse cx="262" cy="182" rx="20" ry="10" fill="url(#fur)" transform="rotate(25 262 182)"/>
+                <ellipse cx="260" cy="182" rx="12" ry="5" fill="#F2C9A0" transform="rotate(25 260 182)"/>
+                <!-- 머리 -->
+                <circle cx="220" cy="196" r="38" fill="url(#fur)"/>
+                <ellipse cx="220" cy="214" rx="20" ry="14" fill="#F8E6C8"/>
+                <ellipse cx="220" cy="206" rx="6" ry="4.2" fill="#3A2A1E"/>
+                <circle cx="205" cy="191" r="4.2" fill="#3A2A1E"/><circle cx="206.5" cy="189.5" r="1.3" fill="#fff"/>
+                <circle cx="235" cy="191" r="4.2" fill="#3A2A1E"/><circle cx="236.5" cy="189.5" r="1.3" fill="#fff"/>
+                <ellipse cx="196" cy="204" rx="5" ry="3" fill="#F2A090" opacity=".7"/>
+                <ellipse cx="244" cy="204" rx="5" ry="3" fill="#F2A090" opacity=".7"/>
+                <path d="M214 216 Q220 221 226 216" fill="none" stroke="#3A2A1E" stroke-width="1.8" stroke-linecap="round"/>
+              </g>
+
+              <!-- 앞쪽 · 前层 -->
+              <g data-depth="1.8">
+                <g transform="translate(296 40) rotate(4)" filter="url(#soft)">
+                  <rect width="124" height="52" rx="6" fill="#FFFDF5"/>
+                  <text x="12" y="19" font-size="7.5" fill="#7A6A45" font-family="sans-serif" font-weight="700" textLength="72" lengthAdjust="spacingAndGlyphs">TODAY'S SONG</text>
+                  <text x="12" y="39" font-size="13" fill="#3A2E12" font-weight="700" font-family="'Noto Sans SC', sans-serif">〈勋章〉 Medals</text>
+                </g>
+                <path d="M100 70 v-22 l18 -4 v22" fill="none" stroke="#C98B4E" stroke-width="3" stroke-linejoin="round"/>
+                <ellipse cx="96" cy="70" rx="6" ry="4.5" fill="#C98B4E"/><ellipse cx="114" cy="66" rx="6" ry="4.5" fill="#C98B4E"/>
+                <path d="M352 140 v-18" stroke="#E39A1E" stroke-width="3" stroke-linecap="round"/>
+                <ellipse cx="348" cy="141" rx="6" ry="4.5" fill="#E39A1E"/>
+                <path d="M352 122 q8 3 10 10" fill="none" stroke="#E39A1E" stroke-width="3" stroke-linecap="round"/>
+                <g transform="translate(58 340) rotate(-6)">
+                  <rect width="122" height="22" rx="11" fill="#FFF3C4" stroke="#EBD9A3"/>
+                  <text x="13" y="15" font-size="9.5" fill="#5A4A26" font-family="sans-serif">a little yellow stage ✦</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="scene-tools">
+            <p class="scene-hint" id="scene-hint">마우스를 움직이거나 스크롤해 보세요 · <span lang="zh-CN">移动鼠标或滚动页面看看</span></p>
+            <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false">⏸ 움직임 멈추기 · 暂停动画</button>
+          </div>
+          <figcaption class="scene-story">
+            <p><strong>그림 속 이야기</strong> — 이름의 ‘鹿(사슴)’에서 아이디어를 얻어, 마이크를 든 아기 사슴으로 노래를, 축구공으로 축구 사랑을, 슬레이트로 연기를 표현했습니다.</p>
+            <p lang="zh-CN"><strong>插画说明</strong>——灵感来自名字里的“鹿”：拿着麦克风的小鹿代表唱歌，足球代表他对足球的热爱，场记板代表演戏。</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 02 세 가지 이유 · 三个理由 ============ -->
+    <section class="reasons" id="reasons" aria-labelledby="reasons-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02 / Three Reasons</p>
+            <h2 class="section-title" id="reasons-title">제가 루한을 좋아하는<br>세 가지 이유.<span class="zh" lang="zh-CN">我喜欢鹿晗的三个理由</span></h2>
+          </div>
+          <p>‘자세히 보기’를 누르면 대표 작품과 제가 좋아하는 점을 볼 수 있어요.<br><span lang="zh-CN">点击“자세히 보기”可以查看代表作品和我喜欢的地方。</span></p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-thumb thumb-a" aria-hidden="true">
+              <svg viewBox="0 0 120 70"><rect x="2" y="2" width="116" height="66" rx="10" fill="#FFF8DC"/><rect x="52" y="14" width="16" height="30" rx="8" fill="#3A2E12"/><path d="M44 34 q16 18 32 0" fill="none" stroke="#3A2E12" stroke-width="3"/><path d="M60 50 v8 M50 58 h20" stroke="#3A2E12" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="24" r="4" fill="#E39A1E"/><path d="M28 24 v-12 l8 -2" fill="none" stroke="#E39A1E" stroke-width="2.4"/><circle cx="94" cy="40" r="4" fill="#E39A1E"/><path d="M98 40 v-12" stroke="#E39A1E" stroke-width="2.4"/></svg>
+            </div>
+            <div class="card-body">
+              <p class="card-label">01 · MUSIC · 音乐</p>
+              <h3>무대 위의 목소리<span class="zh" lang="zh-CN">舞台上的声音</span></h3>
+              <p>2012년 EXO 멤버로 데뷔했고, 2015년 첫 정규 앨범 《Reloaded》를 냈습니다.</p>
+              <p class="zh-p" lang="zh-CN">2012年作为EXO成员出道，2015年发行首张录音室专辑《Reloaded》。</p>
+              <ul class="chip-row"><li class="chip">〈勋章〉</li><li class="chip">〈有点儿意思〉</li><li class="chip">《Seasons》</li></ul>
+              <button class="btn btn--primary" type="button" data-open="dlg-music">자세히 보기 <small lang="zh-CN">详情</small> <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb thumb-b" aria-hidden="true">
+              <svg viewBox="0 0 120 70"><rect x="22" y="22" width="76" height="40" rx="6" fill="#3A2E12"/><g transform="rotate(-8 22 22)"><rect x="22" y="10" width="76" height="12" rx="3" fill="#FFF8DC"/><path d="M32 10 l8 12 M48 10 l8 12 M64 10 l8 12 M80 10 l8 12" stroke="#3A2E12" stroke-width="4"/></g><rect x="32" y="34" width="36" height="5" rx="2.5" fill="#FFE27A"/><rect x="32" y="45" width="24" height="5" rx="2.5" fill="#FFE27A" opacity=".6"/></svg>
+            </div>
+            <div class="card-body">
+              <p class="card-label">02 · ACTING · 表演</p>
+              <h3>계속되는 새로운 도전<span class="zh" lang="zh-CN">不断的新尝试</span></h3>
+              <p>2015년 영화로 연기를 시작해 드라마와 예능까지 다양한 무대에 도전했습니다.</p>
+              <p class="zh-p" lang="zh-CN">2015年开始拍电影，之后又挑战电视剧和综艺，舞台越来越多样。</p>
+              <ul class="chip-row"><li class="chip">《重返20岁》</li><li class="chip">《择天记》</li><li class="chip">《奔跑吧兄弟》</li></ul>
+              <button class="btn btn--primary" type="button" data-open="dlg-acting">자세히 보기 <small lang="zh-CN">详情</small> <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-thumb thumb-c" aria-hidden="true">
+              <svg viewBox="0 0 120 70"><rect x="10" y="10" width="100" height="50" rx="6" fill="#7FA650"/><path d="M60 10 v50" stroke="#EAF3D8" stroke-width="2"/><circle cx="60" cy="35" r="10" fill="none" stroke="#EAF3D8" stroke-width="2"/><rect x="10" y="24" width="10" height="22" fill="none" stroke="#EAF3D8" stroke-width="2"/><rect x="100" y="24" width="10" height="22" fill="none" stroke="#EAF3D8" stroke-width="2"/><circle cx="82" cy="44" r="7" fill="#fff" stroke="#3A2E12" stroke-width="1.5"/><path d="M82 41 l3 2 -1 3 h-4 l-1 -3 z" fill="#3A2E12"/></svg>
+            </div>
+            <div class="card-body">
+              <p class="card-label">03 · FOOTBALL · 足球</p>
+              <h3>축구를 사랑하는 마음<span class="zh" lang="zh-CN">对足球的热爱</span></h3>
+              <p>축구 노래 〈超级冠军(Football Gang)〉을 불렀고, 아이들을 위한 축구 공익 활동도 하고 있습니다.</p>
+              <p class="zh-p" lang="zh-CN">唱过足球主题歌《超级冠军》，还做着为孩子们修建足球场的公益项目。</p>
+              <ul class="chip-row"><li class="chip">〈超级冠军〉</li><li class="chip">「足球第一课」</li></ul>
+              <button class="btn btn--primary" type="button" data-open="dlg-football">자세히 보기 <small lang="zh-CN">详情</small> <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 발자취 · 足迹 ============ -->
+    <section id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03 / Journey</p>
+            <h2 class="section-title" id="journey-title">한 걸음씩 걸어온 길.<span class="zh" lang="zh-CN">一步一步走过的路</span></h2>
+          </div>
+          <p>공개된 자료를 바탕으로 주요 순간만 골라 정리했습니다.<br><span lang="zh-CN">根据公开资料，挑选了几个重要时刻。</span></p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="t-date">1990.04.20</span>
+            <div class="t-card"><h3>베이징에서 태어남</h3><p class="zh-p" lang="zh-CN">出生于北京。</p></div>
+          </li>
+          <li>
+            <span class="t-date">2012</span>
+            <div class="t-card"><h3>EXO 멤버로 데뷔 (EXO-M)</h3><p class="zh-p" lang="zh-CN">以EXO（EXO-M）成员身份出道。</p></div>
+          </li>
+          <li>
+            <span class="t-date">2014</span>
+            <div class="t-card"><h3>중국으로 돌아와 솔로 활동 시작</h3><p class="zh-p" lang="zh-CN">回到中国，开始个人发展。</p></div>
+          </li>
+          <li>
+            <span class="t-date">2015</span>
+            <div class="t-card"><h3>첫 정규 앨범 《Reloaded》 · 영화 《重返20岁》 · 예능 《奔跑吧兄弟》</h3><p class="zh-p" lang="zh-CN">发行首张专辑《Reloaded》，出演首部电影《重返20岁》，加入《奔跑吧兄弟》。</p></div>
+          </li>
+          <li>
+            <span class="t-date">2017</span>
+            <div class="t-card"><h3>첫 드라마 《择天记》 주연</h3><p class="zh-p" lang="zh-CN">主演第一部电视剧《择天记》，饰演陈长生。</p></div>
+          </li>
+          <li>
+            <span class="t-date">2025</span>
+            <div class="t-card"><h3>EP 《Seasons》 발매</h3><p class="zh-p" lang="zh-CN">发行EP《Seasons》，收录〈我的糖〉〈和你看星星〉〈四季〉。</p></div>
+          </li>
+          <li>
+            <span class="t-date">지금 · <span lang="zh-CN">现在</span></span>
+            <div class="t-card"><h3>무대 활동과 축구 공익 활동을 계속하는 중</h3><p class="zh-p" lang="zh-CN">继续舞台演出，以及“足球第一课”公益项目。</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 04 한마디 · 结语 ============ -->
+    <section id="closing" aria-labelledby="closing-title">
+      <div class="container">
+        <div class="closing-box">
+          <div>
+            <p class="eyebrow">04 / One Last Word</p>
+            <h2 class="section-title" id="closing-title">좋아하는 사람이 있으면<br>하루가 조금 더 밝아져요.<span class="zh" lang="zh-CN">有喜欢的人，每一天都会更亮一点。</span></h2>
+            <p>시험과 과제로 바쁜 유학 생활 속에서도, 좋아하는 노래 한 곡이 큰 힘이 됩니다.</p>
+            <p lang="zh-CN">在考试和作业都很忙的留学生活里，一首喜欢的歌也能给我很大的力量。</p>
+          </div>
+          <div class="note-card">
+            <strong>이 페이지에 대해 · <span lang="zh-CN">关于本页面</span></strong>
+            <p>경영정보론 실습으로 만든 비공식 팬 소개 페이지입니다. 그림은 모두 직접 만든 일러스트이며 실제 사진은 사용하지 않았습니다.</p>
+            <p lang="zh-CN">这是经营信息论实践课制作的非官方粉丝介绍页。插画均为自制，没有使用真人照片。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 유일박 · <span lang="zh-CN">刘一博</span> · 경영정보론 실습 과제 · <span lang="zh-CN">经营信息论实践作业</span></span>
+      <a href="#about">맨 위로 · <span lang="zh-CN">回到顶部</span> ↑</a>
+    </div>
+  </footer>
+
+  <!-- ============ 상세 보기 · 详情 ============ -->
+  <dialog class="detail" id="dlg-music" aria-labelledby="dlg-music-title">
+    <div class="dialog-inner">
+      <div class="dialog-top">
+        <div><p class="eyebrow">Reason 01 · Music</p><h2 id="dlg-music-title">무대 위의 목소리 <span class="zh" lang="zh-CN">舞台上的声音</span></h2></div>
+        <button class="dialog-close" type="button" aria-label="닫기 · 关闭" data-close>×</button>
+      </div>
+      <dl>
+        <div><dt>어떤 활동? · <span lang="zh-CN">做了什么</span></dt><dd>2012년 EXO로 데뷔한 뒤, 2015년 첫 정규 앨범 《Reloaded》를 발표했습니다. 2025년에는 EP 《Seasons》를 냈습니다.<span class="zh-p" lang="zh-CN">2012年随EXO出道，2015年发行首张录音室专辑《Reloaded》，2025年又发行了EP《Seasons》。</span></dd></div>
+        <div><dt>추천 곡 · <span lang="zh-CN">推荐歌曲</span></dt><dd>〈勋章(Medals)〉, 〈有点儿意思(That Good Good)〉, 〈四季〉<span class="zh-p" lang="zh-CN">《勋章》《有点儿意思》《四季》</span></dd></div>
+        <div class="mine"><dt>내가 좋아하는 점 · <span lang="zh-CN">我喜欢的地方</span></dt><dd>과제하다 지칠 때 〈勋章〉을 들으면 다시 힘이 납니다.<span class="zh-p" lang="zh-CN">写作业写累的时候，听《勋章》就又有劲了。</span></dd></div>
+      </dl>
+    </div>
+  </dialog>
+
+  <dialog class="detail" id="dlg-acting" aria-labelledby="dlg-acting-title">
+    <div class="dialog-inner">
+      <div class="dialog-top">
+        <div><p class="eyebrow">Reason 02 · Acting</p><h2 id="dlg-acting-title">계속되는 새로운 도전 <span class="zh" lang="zh-CN">不断的新尝试</span></h2></div>
+        <button class="dialog-close" type="button" aria-label="닫기 · 关闭" data-close>×</button>
+      </div>
+      <dl>
+        <div><dt>어떤 활동? · <span lang="zh-CN">做了什么</span></dt><dd>2015년 영화 《重返20岁》로 연기를 시작했고, 2016년 《长城》 등에 출연했습니다. 2017년에는 첫 드라마 《择天记》에서 주인공 천창성(陈长生)을 맡았습니다.<span class="zh-p" lang="zh-CN">2015年凭电影《重返20岁》开始演戏，2016年出演《长城》等电影；2017年在第一部电视剧《择天记》中饰演主角陈长生。</span></dd></div>
+        <div><dt>예능 · <span lang="zh-CN">综艺</span></dt><dd>2015년부터 《奔跑吧兄弟》(달려라 형제)에 출연했습니다.<span class="zh-p" lang="zh-CN">2015年起参加《奔跑吧兄弟》。</span></dd></div>
+        <div class="mine"><dt>내가 좋아하는 점 · <span lang="zh-CN">我喜欢的地方</span></dt><dd>가수에 머물지 않고 새로운 분야에 계속 도전하는 모습이 멋있습니다.<span class="zh-p" lang="zh-CN">他没有只停留在唱歌，一直在尝试新的领域，这一点很酷。</span></dd></div>
+      </dl>
+    </div>
+  </dialog>
+
+  <dialog class="detail" id="dlg-football" aria-labelledby="dlg-football-title">
+    <div class="dialog-inner">
+      <div class="dialog-top">
+        <div><p class="eyebrow">Reason 03 · Football</p><h2 id="dlg-football-title">축구를 사랑하는 마음 <span class="zh" lang="zh-CN">对足球的热爱</span></h2></div>
+        <button class="dialog-close" type="button" aria-label="닫기 · 关闭" data-close>×</button>
+      </div>
+      <dl>
+        <div><dt>어떤 활동? · <span lang="zh-CN">做了什么</span></dt><dd>첫 앨범에 축구 노래 〈超级冠军(Football Gang)〉을 실었고, 아이들을 위해 축구장을 만드는 공익 프로젝트 「足球第一课」를 이어 가고 있습니다.<span class="zh-p" lang="zh-CN">首张专辑收录了足球主题歌《超级冠军》，还发起了为孩子们修建足球场的公益项目“足球第一课”。</span></dd></div>
+        <div class="mine"><dt>내가 좋아하는 점 · <span lang="zh-CN">我喜欢的地方</span></dt><dd>좋아하는 일을 다른 사람에게도 나누는 모습이 따뜻하게 느껴집니다.<span class="zh-p" lang="zh-CN">他把自己喜欢的事情也分享给别人，让人觉得很温暖。</span></dd></div>
+      </dl>
+    </div>
+  </dialog>
+
+  <script>
+  (function () {
+    /* ---------- 모바일 메뉴 · 手机菜单 ---------- */
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    function setMenu(open) { nav.classList.toggle('is-open', open); toggle.setAttribute('aria-expanded', String(open)); }
+    toggle.addEventListener('click', function () { setMenu(toggle.getAttribute('aria-expanded') !== 'true'); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
+    });
+
+    /* ---------- 상세 보기 · 详情弹窗 ---------- */
+    var lastOpener = null;
+    document.querySelectorAll('[data-open]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var dlg = document.getElementById(btn.dataset.open);
+        if (!dlg) return;
+        lastOpener = btn;
+        if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+        var closeBtn = dlg.querySelector('[data-close]');
+        if (closeBtn) closeBtn.focus();
+      });
+    });
+    document.querySelectorAll('dialog.detail').forEach(function (dlg) {
+      dlg.querySelector('[data-close]').addEventListener('click', function () { dlg.close(); });
+      dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+      dlg.addEventListener('close', function () { if (lastOpener) lastOpener.focus(); });
+    });
+
+    /* ---------- 움직이는 무대 (.scene-motion) · 会动的小舞台 ---------- */
+    var scene = document.getElementById('scene');
+    var layers = Array.prototype.slice.call(scene.querySelectorAll('[data-depth]'));
+    var motionBtn = document.getElementById('motion-toggle');
+    var hint = document.getElementById('scene-hint');
+    var reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var fineMQ = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+    var FLOAT_AMP = 5;        // 위아래 약 5px · 上下约5px
+    var FLOAT_PERIOD = 7000;  // 약 7초 주기 · 周期约7秒
+    var MAX_TILT = 4;         // 최대 4도 · 最大倾斜4度
+    var MAX_SHIFT = 8;        // 좌우 이동 · 左右移动(px)
+    var MAX_LIFT = 20;        // 스크롤 시 최대 20px · 滚动最多上移20px
+
+    var paused = reduceMQ.matches;
+    var rafId = null, lastT = null, elapsed = 0;
+    var target = { x: 0, y: 0 }, cur = { x: 0, y: 0 };
+    function clamp(v, a, b) { return Math.min(b, Math.max(a, v)); }
+
+    function updateHint() {
+      hint.innerHTML = paused
+        ? '움직임이 멈췄어요. 그림과 글은 그대로 볼 수 있어요 · <span lang="zh-CN">动画已暂停，图和文字照常显示</span>'
+        : (fineMQ.matches
+            ? '마우스를 움직이거나 스크롤해 보세요 · <span lang="zh-CN">移动鼠标或滚动页面看看</span>'
+            : '스크롤해 보세요 · <span lang="zh-CN">滚动页面看看</span>');
+    }
+
+    window.addEventListener('pointermove', function (e) {
+      if (e.pointerType !== 'mouse' || !fineMQ.matches) return; // 터치에서는 추적하지 않음 · 触屏不追踪
+      var r = scene.getBoundingClientRect();
+      target.x = clamp((e.clientX - (r.left + r.width / 2)) / (window.innerWidth / 2), -1, 1);
+      target.y = clamp((e.clientY - (r.top + r.height / 2)) / (window.innerHeight / 2), -1, 1);
+    }, { passive: true });
+    document.addEventListener('mouseleave', function () { target.x = 0; target.y = 0; });
+
+    function frame(t) {
+      if (lastT === null) lastT = t;
+      elapsed += t - lastT;
+      lastT = t;
+      var float = Math.sin(elapsed / FLOAT_PERIOD * Math.PI * 2) * FLOAT_AMP;
+      var lift = -MAX_LIFT * clamp(window.scrollY / 600, 0, 1);
+      if (!fineMQ.matches) { target.x = 0; target.y = 0; }
+      cur.x += (target.x - cur.x) * 0.06;
+      cur.y += (target.y - cur.y) * 0.06;
+      scene.style.transform =
+        'perspective(900px) translate3d(' + (cur.x * MAX_SHIFT).toFixed(2) + 'px,' + (float + lift).toFixed(2) + 'px,0)' +
+        ' rotateY(' + (cur.x * MAX_TILT).toFixed(2) + 'deg) rotateX(' + (-cur.y * MAX_TILT * 0.6).toFixed(2) + 'deg)';
+      layers.forEach(function (g) {
+        var d = parseFloat(g.getAttribute('data-depth'));
+        g.setAttribute('transform', 'translate(' + (cur.x * d * 4).toFixed(2) + ' ' + (cur.y * d * 3).toFixed(2) + ')');
+      });
+      rafId = requestAnimationFrame(frame);
+    }
+    function start() { if (rafId !== null || paused || document.hidden) return; lastT = null; rafId = requestAnimationFrame(frame); }
+    function stop(reset) {
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      rafId = null;
+      if (reset) { scene.style.transform = 'none'; layers.forEach(function (g) { g.removeAttribute('transform'); }); cur.x = cur.y = 0; }
+    }
+    function render() {
+      motionBtn.setAttribute('aria-pressed', String(paused));
+      motionBtn.textContent = paused ? '▶ 다시 움직이기 · 继续动画' : '⏸ 움직임 멈추기 · 暂停动画';
+      updateHint();
+      if (paused) stop(true); else start();
+    }
+    motionBtn.addEventListener('click', function () { paused = !paused; render(); });
+    var onReduce = function (e) { paused = e.matches; render(); };
+    if (reduceMQ.addEventListener) reduceMQ.addEventListener('change', onReduce); else reduceMQ.addListener(onReduce);
+    var onFine = function () { updateHint(); };
+    if (fineMQ.addEventListener) fineMQ.addEventListener('change', onFine); else fineMQ.addListener(onFine);
+    document.addEventListener('visibilitychange', function () { if (document.hidden) stop(false); else start(); });
+    render();
+  })();
+  </script>
+</body>
+</html>
